@@ -1,75 +1,42 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import SearchField from "react-search-field";
+import FirstImg from './FirstImg';
+import Bar from './Bar';
 
-function App() {
+function App({home}) {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
   const [slide, setSlide] = useState(0);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const barColors = ['#39d5dd', '#71bdf4','#f6ab95','#c284da']
+
   return (
-    <div style={{width:'100%',minHeight:'101vh',backgroundColor:'#f8faff'}}>
-      <div
-        style={{
-          backgroundColor: "#404859",
-          width: "100%",
-          height: 300,
-          marginTop: -20
-        }}
+    <div className='mainCont'>
+      <div className='header'
       >
-        <div
-          style={{
-            marginTop: 10,
-            paddingTop: 20,
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%"
-          }}
+        <div className='pageButtonsCont'
         >
           <div
-            style={{ display: "flex", flexDirection: "column", height: 60 }}
+            className='homebutton'
             onClick={() => setPage(0)}
           >
             <p style={{ color: "white" }}>Home</p>
             {page == 0 && (
-              <div
-                style={{
-                  backgroundColor: "#2ed47d",
-                  borderRadius: "50%",
-                  width: 6,
-                  height: 6,
-                  alignSelf: "center"
-                }}
-              />
+              <div className='greenball'/>
             )}
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              marginLeft: 20,
-              height: 60
-            }}
+          <div className='pagebutton'
             onClick={() => setPage(1)}
           >
             <p style={{ color: "white" }}>Page 2</p>
             {page == 1 && (
-              <div
-                style={{
-                  backgroundColor: "#2ed47d",
-                  borderRadius: "50%",
-                  width: 6,
-                  height: 6,
-                  alignSelf: "center"
-                }}
-              />
+              <div className='greenball'/>
             )}
           </div>
-          <div
-            style={{ display: "flex", flexDirection: "row", marginLeft: 40 }}
-          >
+          <div className='searchCont'>
             <input
               type="text"
               style={{
@@ -88,51 +55,19 @@ function App() {
           </div>
         </div>
 
-        <div style={{ width: "100%", textAlign: "center", marginTop: -10 }}>
+        <div className ='titlesCont'>
+
           <p style={{ fontSize: 52, color: "white" }}>Slide 1</p>
-          <p style={{ fontSize: 19, color: "white", marginTop: -25 }}>
-            Text for slide 1
-          </p>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: 40,
-              justifyContent: "space-evenly",
-              margin: "auto"
-            }}
-          >
-            <div
+          <p style={{ fontSize: 19, color: "white", marginTop: -25 }}>Text for slide 1</p>
+
+          <div className='kebapCont'>
+            <div className='kebapball'
               style={{
-                width: 7,
-                height: 7,
-                borderStyle: "solid",
-                borderWidth: 1,
-                borderColor: "white",
-                borderRadius: "50%",
                 backgroundColor: "#1292ee"
               }}
             />
-            <div
-              style={{
-                width: 7,
-                height: 7,
-                borderStyle: "solid",
-                borderWidth: 1,
-                borderColor: "white",
-                borderRadius: "50%"
-              }}
-            />
-            <div
-              style={{
-                width: 7,
-                height: 7,
-                borderStyle: "solid",
-                borderWidth: 1,
-                borderColor: "white",
-                borderRadius: "50%"
-              }}
-            />
+            <div className='kebapball'/>
+            <div  className='kebapball'/>
           </div>
         </div>
       </div>
@@ -141,74 +76,94 @@ function App() {
 
 <div>
       <div style={{width:'100%',textAlign:'center'}}>
-      <p style={{color:'#071e57',fontSize:32}}>Our Sections</p>  
+            <p style={{color:'#071e57',fontSize:32}}>{home.description}</p>  
       </div> 
 
-              <div
-                style={{
-                  marginTop: 10,
-                  paddingTop: 20,
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "flex-end",
-                  alignItems: "center",
-                  
-                  width: "80%"
-                }}
-              >
+              <div className='sectionButtonsCont'>
                 <div
-                  style={{ display: "flex", flexDirection: "column", height: 60 }}
+                  className='homebutton'
                   onClick={() => setSlide(0)}
                 >
-                  <p style={{ color: "#253642" }}>Slide1</p>
+                  <p style={{ color: "#253642" }}>Section 1</p>
                   {slide == 0 && (
-                    <div
-                      style={{
-                        backgroundColor: "#1292ee",
-                        borderRadius: "50%",
-                        width: 6,
-                        height: 6,
-                        alignSelf: "center"
-                      }}
-                    />
+                    <div className='blueball'/>
                   )}
                 </div>
                 <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    marginLeft: 20,
-                    height: 60
-                  }}
+                  className='pagebutton'
                   onClick={() => setSlide(1)}
                 >
-                  <p style={{ color: "#253642" }}>Slide 2</p>
+                  <p style={{ color: "#253642" }}>Section 2</p>
                   {slide == 1 && (
-                    <div
-                      style={{
-                        backgroundColor: "#1292ee",
-                        borderRadius: "50%",
-                        width: 6,
-                        height: 6,
-                        alignSelf: "center"
-                      }}
-                    />
+                     <div className='blueball'/>
                   )}
                 </div>
               </div>
 
 
-              <div style={{marginLeft:'26%',width:'60%',marginTop:30,display:'flex',flexDirection:'row'}}>
-                  <div style={{backgroundColor:'#cccccc',width:'30%',height:370,marginRight:'1%'}}></div>
-                  <div style={{display:'flex',flexDirection:'column',width:'30%',alignItems:'center'}}>
-                    <div style={{backgroundColor:'#cccccc',width:'90%',height:175}}></div>
-                    <div style={{backgroundColor:'#cccccc',width:'90%',height:175,marginTop:20}}></div>
+              {slide==0&&<div className='section1Cont'>
+                  <FirstImg width={'30%'} height={370} data={home.sections[0].images[0].img} />
+
+                  <div className='duoimgCont'>
+
+                    <FirstImg width={'90%'} height={175} data={home.sections[0].images[1].img} />
+                    <FirstImg width={'90%'} height={175} data={home.sections[0].images[2].img} style={20} />
+                 
                   </div>
-                  <div style={{display:'flex',flexDirection:'column',width:'30%',alignItems:'center'}}>
-                    <div style={{backgroundColor:'#cccccc',width:'90%',height:175}}></div>
-                    <div style={{backgroundColor:'#cccccc',width:'90%',height:175,marginTop:20}}></div>
+                  <div className='duoimgCont'>
+
+                  <FirstImg width={'90%'} height={175} data={home.sections[0].images[3].img} />
+                  <FirstImg width={'90%'} height={175} data={home.sections[0].images[4].img} style={20} />
+
                   </div>
-              </div>
+              </div>}
+
+              {slide==1&&
+              <div className='section2Cont'>
+                <div style={{marginLeft:'15%'}}>
+                
+                  <div style={{width:'60%',}}>
+                        <div>
+                            <p style={{color:'#3ca5f1',fontSize:20,}}>{home.sections[1].title}</p>
+                        </div>
+
+                        <div>
+                            <p style={{color:'#071e57',fontSize:32}}>{home.sections[1].graphText}</p>
+                        </div>
+
+
+                        {home.sections[1].stats.map((it,ind)=> <Bar percent={it.amount/10} color={barColors[ind]} title={it.title}/>)}
+
+
+                    </div>
+                  </div>
+
+                  <div style={{display:'flex',flexDirection:'column',alignItems:'center',marginLeft:'-10%',marginTop:60}}>
+                   
+                    <p style={{color:'#071e57',fontSize:32}}>{home.sections[1].formText}</p>
+                    
+                    <p style={{color:'#748494',fontSize:14,width:'84%',marginTop:-20}}>We work with ecosystem leaders, corporations and startups worldwide. How can we help you?</p>
+
+                    {home.sections[1].formLabels.map((it,ind)=>
+                    <input
+                    type="text"
+                    className='formInput'
+                    placeholder={it}
+                    onChange={event => setName(event.target.value)}
+                  />
+                    
+                    )}
+                   
+                    <button type="button" className='button'>
+                    {home.sections[1].buttonText}
+                    </button>
+                  </div>
+
+                
+
+                 
+                 
+              </div>}
 
 </div>
 

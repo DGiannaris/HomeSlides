@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+.mainCont{
+  width:100%;
+  min-height:101vh;
+  background-color:#f8faff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: #404859;
+  width: 100%;
+  height: 300px;
+  margin-top: -20px;
+}
+.pageButtonsCont{
+  margin-top: 10px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homebutton{
+  display: flex; 
+  flex-direction: column; 
+  height: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.greenball{
+  background-color: #2ed47d;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  align-self: center;
+}
+
+.pagebutton{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 20px;
+  height: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.searchCont{
+  display: flex; 
+  flex-direction: row; 
+  margin-left: 40 ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titlesCont{
+  width: 100%; 
+  text-align: center; 
+  margin-top: -10px;
+}
+
+.kebapCont{
+  display: flex;
+  flex-direction: row;
+  width: 40px;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.kebapball{
+  width: 7px;
+  height: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 50%;
+}
+
+.sectionButtonsCont{
+  margin-top: 10px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;  
+  width: 76%
+}
+.blueball{
+  background-color: #1292ee;
+  border-Radius: 50%;
+  width: 6px;
+  height: 6px;
+  align-self: center;
+}
+.section1Cont{
+  margin-left:23%;
+  width:60%;
+  margin-top:30px;
+  display:flex;
+  flex-direction:row;
+}
+.duoimgCont{
+  display:flex;
+  flex-direction:column;
+  width:30%;
+  align-items:center;
+}
+
+.section2Cont{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  padding-bottom:100px;
+}
+
+.formInput{
+  background-color: #f5f5f5;
+  border-color: transparent;
+  height: 50px;
+  width:65%;
+  margin-top:15px;
+}
+.button{
+  width:25%;
+  height:40px;
+  background-color:#166dd5;
+  border-color:transparent;
+  margin-top:15px;
+  color:white;
 }

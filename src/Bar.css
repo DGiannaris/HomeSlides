@@ -1,0 +1,25 @@
+.titleCont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title{
+  color: #071e57;
+  font-size: 14px; 
+  font-weight: bold ;
+}
+
+.greybar{
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.percent{
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+
+}
