@@ -26,6 +26,10 @@
   height: 60px;
 }
 
+.homebutton:hover{
+cursor: pointer;
+}
+
 .greenball{
   background-color: #2ed47d;
   border-radius: 50%;
@@ -41,6 +45,9 @@
   height: 60px;
 }
 
+.pagebutton{
+  cursor: pointer;
+}
 .searchCont{
   display: flex; 
   flex-direction: row; 

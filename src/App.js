@@ -105,8 +105,9 @@ function App({home}) {
                   <FirstImg width={'30%'} height={370} data={home.sections[0].images[0].img} />
 
                   <div className='duoimgCont'>
-
+                    
                     <FirstImg width={'90%'} height={175} data={home.sections[0].images[1].img} />
+                   
                     <FirstImg width={'90%'} height={175} data={home.sections[0].images[2].img} style={20} />
                  
                   </div>
